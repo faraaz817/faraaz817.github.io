@@ -1,7 +1,7 @@
 # faraaz817.github.io
 
 Personal portfolio and résumé site. Plain HTML/CSS/JS, no build step, no framework —
-same approach as [Time Flow](https://github.com/faraaz817/time-flow-web).
+same approach as the Time Flow web UI.
 
 Live at [faraaz817.github.io](https://faraaz817.github.io) once Pages is enabled (see below).
 
