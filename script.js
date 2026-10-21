@@ -33,6 +33,40 @@
     revealEls.forEach((el) => el.classList.add("in"));
   }
 
+  // Skills: each chip links to its strongest example; with JS, scroll there and light up every
+  // card that uses the skill, and say where it was used.
+  const toast = document.getElementById("skillToast");
+  let toastTimer;
+  document.querySelectorAll("a.skill-chip[data-targets]").forEach((chip) =>
+    chip.addEventListener("click", (e) => {
+      const targets = chip.dataset.targets
+        .split(" ")
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+      if (!targets.length) return;
+      e.preventDefault();
+      // Clear the previous skill's highlight so only this skill's cards light up.
+      document.querySelectorAll(".is-flash").forEach((el) => el.classList.remove("is-flash"));
+      targets.forEach((el) => {
+        el.classList.add("in");
+        el.classList.remove("is-flash");
+        void el.offsetWidth; // restart the animation if it's already running
+        el.classList.add("is-flash");
+      });
+      targets[0].scrollIntoView({ behavior: "smooth", block: "center" });
+      history.replaceState(null, "", `#${targets[0].id}`);
+      if (toast) {
+        toast.textContent = chip.title.replace("Used in:", `${chip.textContent} — used in:`);
+        toast.hidden = false;
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => (toast.hidden = true), 4500);
+      }
+    })
+  );
+  document.addEventListener("animationend", (e) => {
+    if (e.animationName === "flash") e.target.classList.remove("is-flash");
+  });
+
   // Chat: answers come from the Bro API on Vercel, which holds the Anthropic key server-side.
   const CHAT_API = "https://job-go-mauve.vercel.app/api/portfolio-qa";
   const openBtn = document.getElementById("chatOpen");
