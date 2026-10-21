@@ -44,8 +44,9 @@
     <p class="hero-role reveal"><em>AI/ML engineer &amp; software developer.</em></p>
     <p class="hero-lede reveal">
       Master of Artificial Intelligence graduate (RMIT, Jul 2026) with a B.Tech in Information
-      Technology, working across applied ML and software engineering. At
-      <a href="#experience">Prodegee</a>, designed the school-geolocation algorithm at the core of a
+      Technology, working across applied ML and software engineering. Now a full-stack developer
+      intern at <a href="#experience">Vayaa</a>, building the company website on Rust and React. At
+      Prodegee, designed the school-geolocation algorithm at the core of a
       country-scale electrification pipeline. Co-author of a peer-reviewed computer-vision paper. In
       2026, independently built two Android apps (one in community use) and an MCP-based local-LLM
       delegation system — requirements first, reviewed, unit-tested.
@@ -71,6 +72,22 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="section section-dark">
     <div class="section-head reveal"><p class="kicker">01 · Experience</p><h2 class="section-title">Where I&#39;ve <em>worked</em></h2></div>
+
+    <article class="xp reveal">
+      <div class="xp-head">
+        <div>
+          <h3>Full-Stack Developer Intern <span class="xp-org">— Vayaa</span></h3>
+          <p class="xp-meta">Melbourne · hybrid · the company website: React + TypeScript frontend, Rust (Axum) backend, Docker then AWS</p>
+        </div>
+        <span class="xp-date">Sep 2026 – present</span>
+      </div>
+      <ul class="xp-list">
+        <li>Building the company's website from a mentor's brief; turned each plain-language request into numbered functional and non-functional requirements and kept a decision log (choice, alternatives, cost) for every design call.</li>
+        <li>Built the Rust backend's contact-enquiry API: server-side validation that reports every failed rule at once and converts raw input into a clean type, so only checked data can reach the database.</li>
+        <li>Capped request bodies at 16 KB so oversized payloads are refused before parsing, limited CORS to the frontend's origin, and verified the 200 / 400 / 413 / 422 paths with curl.</li>
+      </ul>
+      <p class="xp-tools">Rust · Axum · Tokio · serde · React 19 · TypeScript · Vite · Git · Claude Code</p>
+    </article>
 
     <article class="xp reveal">
       <div class="xp-head">
@@ -207,7 +224,7 @@
     <div class="skills reveal">
       <div class="skill-row">
         <span class="skill-label">Languages</span>
-        <span class="skill-tags">Python · Kotlin · JavaScript · TypeScript · SQL · Prolog / ASP · Bash</span>
+        <span class="skill-tags">Python · Kotlin · JavaScript · TypeScript · Rust · SQL · Prolog / ASP · Bash</span>
       </div>
       <div class="skill-row">
         <span class="skill-label">AI / ML</span>
@@ -219,7 +236,7 @@
       </div>
       <div class="skill-row">
         <span class="skill-label">Software</span>
-        <span class="skill-tags">Android (Kotlin, AlarmManager, JUnit) · PWA / Service Workers · Node.js · Next.js · Prisma · REST/JSON</span>
+        <span class="skill-tags">Android (Kotlin, AlarmManager, JUnit) · Rust web APIs (Axum, Tokio, serde) · React · PWA / Service Workers · Node.js · Next.js · Prisma · REST/JSON</span>
       </div>
       <div class="skill-row">
         <span class="skill-label">AI-assisted engineering</span>
