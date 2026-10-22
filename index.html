@@ -46,7 +46,7 @@
     <p class="hero-lede reveal">
       Master of Artificial Intelligence graduate (RMIT, Jul 2026) with a B.Tech in Information
       Technology, working across applied ML and software engineering. Now a full-stack developer
-      intern at <a href="#experience">Vayaa</a>, building the company website on Rust and React. At
+      intern at <a href="#experience">Vayaa</a>, where the company website is now live on AWS. At
       Prodegee, designed the school-geolocation algorithm at the core of a
       country-scale electrification pipeline. Co-author of a peer-reviewed computer-vision paper. In
       2026, independently built two Android apps (one in community use) and an MCP-based local-LLM
@@ -78,16 +78,16 @@
       <div class="xp-head">
         <div>
           <h3>Full-Stack Developer Intern <span class="xp-org">— Vayaa</span></h3>
-          <p class="xp-meta">Melbourne · hybrid · the company website: React + TypeScript frontend, Rust (Axum) backend, Docker then AWS</p>
+          <p class="xp-meta">Melbourne · hybrid · the company website: React + TypeScript, Python (FastAPI) + PostgreSQL, deployed on AWS</p>
         </div>
         <span class="xp-date">Sep 2026 – present</span>
       </div>
       <ul class="xp-list">
         <li>Building the company's website from a mentor's brief; turned each plain-language request into numbered functional and non-functional requirements and kept a decision log (choice, alternatives, cost) for every design call.</li>
-        <li>Built the Rust backend's contact-enquiry API: server-side validation that reports every failed rule at once and converts raw input into a clean type, so only checked data can reach the database.</li>
-        <li>Capped request bodies at 16 KB so oversized payloads are refused before parsing, limited CORS to the frontend's origin, and verified the 200 / 400 / 413 / 422 paths with curl.</li>
+        <li>Built the contact-enquiry API in Rust (server-side validation, clean types), then led its port to Python (FastAPI) on the mentor's call, gating the cutover on 50 parity tests passing against both backends.</li>
+        <li>Took it live on AWS with CloudFormation (CloudFront → ECS Fargate → RDS PostgreSQL) in five attempts, fixing Free-plan limits, a CloudFront account block and RDS TLS (verify-full); SNS emails each enquiry.</li>
       </ul>
-      <p class="xp-tools">Rust · Axum · Tokio · serde · React 19 · TypeScript · Vite · Git · Claude Code</p>
+      <p class="xp-tools">Python · FastAPI · SQLAlchemy · PostgreSQL · Docker · AWS · Rust (Axum) · React · TypeScript · Claude Code</p>
     </article>
 
     <article id="xp-prodegee" class="xp reveal">
@@ -133,7 +133,7 @@
           <span class="card-date">Jul 2026 – present</span>
         </div>
         <p class="card-stack">JavaScript · Kotlin · AlarmManager · GitHub Actions</p>
-        <p class="card-desc">ADHD-focused planner for Android, in development for commercial release.
+        <p class="card-desc">ADHD-focused planner for Android (iOS in progress), in development for commercial release.
           Packs goals, recurring targets and reminders into a user's free minutes with an urgency ×
           importance scoring model; vanilla-JS UI in a Kotlin shell with exact alarms and background
           focus timers. CI tests every PR; signed releases to testers. Closed source.</p>
@@ -226,7 +226,7 @@
     <div class="skills reveal">
       <div class="skill-row">
         <span class="skill-label">Languages</span>
-        <span class="skill-tags"><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee p-maize p-fire" title="Used in: Prodegee internship, Maize Leaf Disease Classification, Fire Detection">Python</a><a class="skill-chip" href="#p-mgm" data-targets="p-mgm p-timeflow" title="Used in: MGM Prayer Alerts, Time Flow">Kotlin</a><a class="skill-chip" href="#p-timeflow" data-targets="p-timeflow p-gemma" title="Used in: Time Flow, Gemma Delegation System">JavaScript</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa p-bro" title="Used in: Vayaa internship, Bro chatbot">TypeScript</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">Rust</a><span class="skill-chip is-plain">SQL</span><a class="skill-chip" href="#p-neuro" data-targets="p-neuro edu-rmit" title="Used in: NeuroVisualZ, Master of AI, RMIT">Prolog / ASP</a><span class="skill-chip is-plain">Bash</span></span>
+        <span class="skill-tags"><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee xp-vayaa p-maize p-fire" title="Used in: Prodegee internship, Vayaa internship, Maize Leaf Disease Classification, Fire Detection">Python</a><a class="skill-chip" href="#p-mgm" data-targets="p-mgm p-timeflow" title="Used in: MGM Prayer Alerts, Time Flow">Kotlin</a><a class="skill-chip" href="#p-timeflow" data-targets="p-timeflow p-gemma" title="Used in: Time Flow, Gemma Delegation System">JavaScript</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa p-bro" title="Used in: Vayaa internship, Bro chatbot">TypeScript</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">Rust</a><span class="skill-chip is-plain">SQL</span><a class="skill-chip" href="#p-neuro" data-targets="p-neuro edu-rmit" title="Used in: NeuroVisualZ, Master of AI, RMIT">Prolog / ASP</a><span class="skill-chip is-plain">Bash</span></span>
       </div>
       <div class="skill-row">
         <span class="skill-label">AI / ML</span>
@@ -238,7 +238,7 @@
       </div>
       <div class="skill-row">
         <span class="skill-label">Software</span>
-        <span class="skill-tags"><a class="skill-chip" href="#p-mgm" data-targets="p-mgm p-timeflow" title="Used in: MGM Prayer Alerts, Time Flow">Android (Kotlin, AlarmManager, JUnit)</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">Rust web APIs (Axum, Tokio, serde)</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">React</a><a class="skill-chip" href="#p-timeflow" data-targets="p-timeflow" title="Used in: Time Flow">PWA / Service Workers</a><a class="skill-chip" href="#p-gemma" data-targets="p-gemma" title="Used in: Gemma Delegation System">Node.js</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Next.js</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Prisma</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa p-bro" title="Used in: Vayaa internship, Bro chatbot">REST/JSON</a></span>
+        <span class="skill-tags"><a class="skill-chip" href="#p-mgm" data-targets="p-mgm p-timeflow" title="Used in: MGM Prayer Alerts, Time Flow">Android (Kotlin, AlarmManager, JUnit)</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">Web APIs (FastAPI, Rust/Axum)</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">PostgreSQL (SQLAlchemy)</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">React</a><a class="skill-chip" href="#p-timeflow" data-targets="p-timeflow" title="Used in: Time Flow">PWA / Service Workers</a><a class="skill-chip" href="#p-gemma" data-targets="p-gemma" title="Used in: Gemma Delegation System">Node.js</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Next.js</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Prisma</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa p-bro" title="Used in: Vayaa internship, Bro chatbot">REST/JSON</a></span>
       </div>
       <div class="skill-row">
         <span class="skill-label">AI-assisted engineering</span>
@@ -246,7 +246,7 @@
       </div>
       <div class="skill-row">
         <span class="skill-label">Tooling</span>
-        <span class="skill-tags"><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee p-mgm p-timeflow" title="Used in: Prodegee internship, MGM Prayer Alerts, Time Flow">Git/GitHub</a><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee" title="Used in: Prodegee internship">Kestra</a><span class="skill-chip is-plain">Docker</span><a class="skill-chip" href="#p-maize" data-targets="p-maize p-gemma" title="Used in: Maize Leaf Disease Classification, Gemma Delegation System">Colab/Jupyter</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Vercel</a><span class="skill-chip is-plain">GitHub Pages</span><a class="skill-chip" href="#p-ibmz" data-targets="p-ibmz cert-concepts cert-contributor" title="Used in: IBM Z development toolchain, IBM Z Xplore – Concepts badge, IBM Z &amp; LinuxONE Community Contributor badge">IBM z/OS + Zowe</a><span class="skill-chip is-plain">Linux</span></span>
+        <span class="skill-tags"><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee p-mgm p-timeflow" title="Used in: Prodegee internship, MGM Prayer Alerts, Time Flow">Git/GitHub</a><a class="skill-chip" href="#xp-prodegee" data-targets="xp-prodegee" title="Used in: Prodegee internship">Kestra</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">Docker</a><a class="skill-chip" href="#xp-vayaa" data-targets="xp-vayaa" title="Used in: Vayaa internship">AWS (CloudFormation, Fargate, RDS, CloudFront, SNS)</a><a class="skill-chip" href="#p-maize" data-targets="p-maize p-gemma" title="Used in: Maize Leaf Disease Classification, Gemma Delegation System">Colab/Jupyter</a><a class="skill-chip" href="#p-bro" data-targets="p-bro" title="Used in: Bro chatbot">Vercel</a><span class="skill-chip is-plain">GitHub Pages</span><a class="skill-chip" href="#p-ibmz" data-targets="p-ibmz cert-concepts cert-contributor" title="Used in: IBM Z development toolchain, IBM Z Xplore – Concepts badge, IBM Z &amp; LinuxONE Community Contributor badge">IBM z/OS + Zowe</a><span class="skill-chip is-plain">Linux</span></span>
       </div>
     </div>
   </section>
